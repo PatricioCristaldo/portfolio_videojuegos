@@ -1,5 +1,5 @@
-import React from 'react'
-import CV from '../../../public/images/CV.jpg'
+/* import React from 'react'
+import CV from '../../public/images/'
 
 export const Portfolio = () => {
   return (
@@ -12,3 +12,4 @@ export const Portfolio = () => {
   )
 }
 
+ */

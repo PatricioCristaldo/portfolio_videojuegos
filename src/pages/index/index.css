@@ -17,13 +17,15 @@
     padding: 0;
     box-sizing: border-box;
 }
-:root{
-    --primary-color: #1E50C1;
-    --secondary-color: #91a7d9;
-    --tertiary-color: #213D49;
-    --quaternary-color: #DBCE16;
-    --quinary-color: #FFFFFF;
+:root {
+  --primary-color: #1F3A93;      /* Azul oscuro */
+  --secondary-color: #5A8FD6;    /* Azul claro */
+  --tertiary-color: #6A0DAD;     /* Púrpura */
+  --quaternary-color: #000000;   /* Negro */
+  --quinary-color: #808080;      /* Gris */
+  --accent-color: #FF8C00;       /* Naranja */
 }
+
 
 body {
     line-height: 1.6;

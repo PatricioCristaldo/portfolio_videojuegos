@@ -1,0 +1,87 @@
+/* HERO */
+.hero {
+  background-image: url("../../public/images/Fondo2.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* ocupa toda la pantalla al inicio */
+    display: flex;
+    position: relative;
+    color: white;
+  flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.project {
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 80vw;
+      justify-content: space-around;
+}
+.proyecto-card img {
+  width: 200px;      /* mismo ancho */
+  height: 250px;     /* misma altura */
+  object-fit: cover; /* 🔥 recorta pero mantiene proporción */
+  border-radius: 8px;
+}
+
+
+.project:hover {
+  transform: scale(1.02);
+}
+
+/* .project-image {
+  flex: 1;
+} */
+
+.project-image img {
+  width: 400px;       /* tamaño fijo de imagen */
+  flex-shrink: 0;     /* evita que se achique */
+  border-radius: 8px; /* opcional */
+}
+
+.project-info {
+
+    display: flex
+;
+    max-width: 50%;
+    word-wrap: break-word;
+    line-height: 1.5;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+} 
+
+.project-info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #ff8c00; /* Naranja de tu paleta */
+}
+
+.project-info p {
+  font-size: x-large;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.project-info a {
+  display: inline-block;
+    padding: 20px 80px;
+  background: linear-gradient(45deg, #1F3A93, #6A0DAD);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.project-info a:hover {
+  background: linear-gradient(45deg, #ff8c00, #6A0DAD);
+}

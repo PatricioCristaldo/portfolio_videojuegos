@@ -1,25 +1,25 @@
-import React from 'react'
 import './Header.css'
 
-function Header() {
+const Header = () => {
   return (
-    <header>
-        <div className="headerContainer">
-            <div className="logo">
-                <h1>P. CRISTALDO</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="/tp-final-2-react-utn/">Principio</a></li>
-                    <li><a href="https://github.com/PatricioCristaldo?tab=repositories">Projectos</a></li>
-                    <li><a href="#services">Servicios</a></li>
-                    <li><a href="#about">Acerca de mi</a></li>
-                </ul>
-            </nav>
-            <a href="mailto:patricio_cristaldo@outlook.com?subject=Cotización&body=Hola, me gustaría pedir presupuesto para..." className="quote-button">Cotización</a>
-        </div>
-    </header>
-  )
-}
+    <header className="header">
+      {/* Logo o nombre personal */}
+      <div className="header-logo">
+        <h2>Patricio Cristaldo</h2>
+      </div>
+        <h1>Game Developer</h1>
 
-export default Header
+      {/* Menú de navegación */}
+      <nav className="header-nav">
+        <ul>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#about">Sobre mí</a></li>
+          <li><a href="#contact">Contacto</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+  );
+};
+
+export default Header;

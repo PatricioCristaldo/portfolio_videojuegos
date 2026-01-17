@@ -3,7 +3,7 @@ import "./Hero.css";
 
 import spiderRushImg from "../../public/images/Spider.png";
 import TLKImg from "../../public/images/TLK.png";
-import NinjasImg from "../../public/images/Ninjas.png";
+import NinjasImg from "../../public/images/anomalous_dreams.png";
 import IgluImg from "../../public/images/Iglu.png";
 
 const projects = [
@@ -14,10 +14,10 @@ const projects = [
     link: "https://zahircheveste.itch.io/spider-rush",
   },
   {
-    title: "The Last Knight",
-    description: "Juego 2D con vista cenital. Desarrollado desde la plataforma de Scratch. Donde manejaremos a un caballero que debe buscar varios objetos por los distintos mapas esquivando obstáculos, se empieza con 5 corazones que indican la vida y si estos llegan a 0 pierde.",
-    image: TLKImg,
-    link: "https://scratch.mit.edu/projects/696499164",
+    title: "Anomalous Dreams",
+    description: "Prototipo de videojuego narrativo con mecánicas de puzzle y un ambiente de suspenso psicológico. El jugador encarna a una persona atrapada en un ciclo de sueños anómalos dentro de su propia casa. En este mundo onírico, los objetos aparecen con tamaños alterados respecto a la realidad, lo que representa las anomalías que el jugador debe detectar y corregir.",
+    image: NinjasImg,
+    link: "https://zahircheveste.itch.io/anomalous-dreams",
   },
   {
     title: "Iglu Family",
@@ -26,10 +26,10 @@ const projects = [
     link: "https://gd.games/dreanox/iglu-family",
   },
   {
-    title: "Ninjas El Camino Sagrado",
-    description: "En este juego nos metemos en la piel de un ninja, que se encuentra realizando su entrenamiento para convertirse en un maestro. Deberemos sortear distintos obstáculos hasta llegar a los cerezos que le mostraran el camino al siguiente nivel.",
-    image: NinjasImg,
-    link: "https://scratch.mit.edu/projects/1163615318/",
+    title: "The Last Knight",
+    description: "Juego 2D con vista cenital. Desarrollado desde la plataforma de Scratch. Donde manejaremos a un caballero que debe buscar varios objetos por los distintos mapas esquivando obstáculos, se empieza con 5 corazones que indican la vida y si estos llegan a 0 pierde.",
+    image: TLKImg,
+    link: "https://scratch.mit.edu/projects/696499164",
   },
 ];
 

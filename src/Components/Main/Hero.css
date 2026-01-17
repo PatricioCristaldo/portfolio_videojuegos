@@ -43,6 +43,7 @@
 
 .project-image img {
   width: 400px;       /* tamaño fijo de imagen */
+  height: 266px;
   flex-shrink: 0;     /* evita que se achique */
   border-radius: 8px; /* opcional */
 }

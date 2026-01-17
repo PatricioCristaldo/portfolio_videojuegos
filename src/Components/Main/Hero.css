@@ -3,14 +3,14 @@
   background-image: url("../../public/images/Fondo2.jpg");
   background-size: cover;
   background-position: center;
-  height: 100vh; /* ocupa toda la pantalla al inicio */
+  height: 250vh; /* ocupa toda la pantalla al inicio */
     display: flex;
     position: relative;
     color: white;
   flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 60px;
+    padding-top: 20px;
 }
 
 .project {

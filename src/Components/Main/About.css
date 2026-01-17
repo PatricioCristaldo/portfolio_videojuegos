@@ -24,10 +24,15 @@
   padding: 20px;
 }
 
-.about-title {
+.about-text h2{
   font-size: 3rem;
   font-family: "AGENCYFB";
-  color: var(--tertiary-color);
+  color: #fff;
+}
+.about-text p{
+  font-size: 3rem;
+  font-family: "AGENCYFB";
+  color: var(--accent-color);
 }
 
 .about-subtitle {
@@ -75,4 +80,16 @@
 .btn-secondary:hover {
   background: var(--primary-color);
   color: #fff;
+}
+.about-img {
+width: 16vw;
+   display: flex; /* clave para eliminar el espacio inferior */
+  border: 2px solid rgba(105, 13, 171, 0.6);
+  padding: 6px 6px 0 6px; /* sin padding abajo */
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.about-img img{
+width: 16vw;
+
 }

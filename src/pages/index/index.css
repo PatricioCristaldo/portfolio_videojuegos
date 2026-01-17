@@ -20,7 +20,7 @@
 :root {
   --primary-color: #1F3A93;      /* Azul oscuro */
   --secondary-color: #5A8FD6;    /* Azul claro */
-  --tertiary-color: #6A0DAD;     /* Púrpura */
+  --tertiary-color: rgb(105, 13, 171);     /* Púrpura */
   --quaternary-color: #000000;   /* Negro */
   --quinary-color: #808080;      /* Gris */
   --accent-color: #FF8C00;       /* Naranja */

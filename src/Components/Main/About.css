@@ -1,6 +1,6 @@
 /* about */
 .about {
-  background-image:url("../../public/images/Fondo1.jpg");
+  -background-image:url("../../public/images/Fondo1.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh; /* ocupa toda la pantalla al inicio */

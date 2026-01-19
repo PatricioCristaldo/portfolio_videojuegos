@@ -1,6 +1,6 @@
 .contact {
   padding: 4rem 2rem;
-    background-image: url("../../public/images/Fondo2.jpg");
+    -background-image: url("../../public/images/Fondo2.jpg");
       background-size: cover;
   background-position: center;
   color: #fff;

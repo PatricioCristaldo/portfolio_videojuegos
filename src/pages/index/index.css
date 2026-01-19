@@ -26,9 +26,17 @@
   --accent-color: #FF8C00;       /* Naranja */
 }
 
+body {
+  margin: 0;
+  background-image: url("../../public/images/Fondo1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  line-height: 1.6;
+}
 
 body {
-    line-height: 1.6;
 }
 
 

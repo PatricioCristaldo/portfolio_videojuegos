@@ -10,7 +10,7 @@
     align-items: center;
 }
 
-header {
+.header {
   position: fixed;   /* 👈 clave */
   top: 0;
   left: 0;
@@ -34,20 +34,20 @@ header {
 
 
 
-header h1 {
+.header h1 {
     font-family: "AGENCYFB", sans-serif;
     color: var(--accent-color);
     font-weight: normal;
     letter-spacing: 2px;
 }
-header h2 {
+.header h2 {
     font-family: "AGENCYFB", sans-serif;
     color: var(--tertiary-color);
     font-weight: bold;
     letter-spacing: 2px;
 }
 
-header a {
+.header a {
 color: var(--secondary-color);
     text-decoration: none;
     text-transform: uppercase;
@@ -55,23 +55,23 @@ color: var(--secondary-color);
     transition: all 0.3s ease;
 }
 
-header a:hover {
+.header a:hover {
     color: var(--secondary-color);
     text-decoration: underline;
 }
 
-header ul {
+.header ul {
     padding: 0;
     list-style: none;
 }
 
-header li {
+.header li {
     display: inline;
     padding: 0 15px;
     font-family: "GADUGI", sans-serif;
 }
 
-header .quote-button {
+.header .quote-button {
     float: right;
     text-decoration: none;
     color: #fff;
@@ -83,13 +83,13 @@ header .quote-button {
     transition: all 0.3s ease;
 }
 
-header .quote-button:hover {
+.header .quote-button:hover {
     background: var(--secondary-color);
     color: #fff;
 }
 
 /* Responsive Styles */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .header {
     display: flex;
   flex-direction: column; /* Apila todo verticalmente */
@@ -143,7 +143,7 @@ background-color: rgba(0, 0, 0, 0.8); /* Ajusta según tu diseño */
 
 .header-nav a {
   text-decoration: none;
-  color: white;
+  color: var(--secondary-color);;
   font-size: 0.8rem;
   text-transform: uppercase;
 }

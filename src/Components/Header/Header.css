@@ -1,5 +1,6 @@
 
 /* HEADER */
+
 .headerContainer {
     display: flex;
     width: 85%;
@@ -88,58 +89,63 @@ header .quote-button:hover {
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) { /* Tablet view */
-    .headerContainer {
-        flex-direction: column;
-        width: 100%;
-    }
-    header {
-        padding: 10px;
-    }
-    header h1 {
-        font-size: 24px;
-        text-align: center;
-    }
-    header ul {
-        text-align: center;
-        padding: 0;
-    }
-    header li {
-        display: block;
-        padding: 10px 0;
-    }
-    header .quote-button {
-        float: none;
-        display: block;
-        margin: 10px auto;
-        text-align: center;
-    }
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+  flex-direction: column; /* Apila todo verticalmente */
+  align-items: center;
+/*   padding: 15px; */
+
+background-color: rgba(0, 0, 0, 0.8); /* Ajusta según tu diseño */
 }
 
+  .header-nav ul {
+    flex-direction: row; /* Links uno al lado del otro */
+    gap: 25px;
+  }
+}
+/**/
 @media (max-width: 480px) { /* Mobile view */
-    .headerContainer {
-        flex-direction: column;
-        width: 100%;
-    }
-    header {
-        padding: 10px;
-    }
-    header h1 {
-        font-size: 20px;
-        text-align: center;
-    }
-    header ul {
-        text-align: center;
-        padding: 0;
-    }
-    header li {
-        display: block;
-        padding: 8px 0;
-    }
-    header .quote-button {
-        float: none;
-        display: block;
-        margin: 10px auto;
-        text-align: center;
-    }
+  .header {
+    display: flex;
+  flex-direction: column; /* Apila todo verticalmente */
+  align-items: center;
+/*   padding: 15px; */
+gap: 15px;
+background-color: rgba(0, 0, 0, 0.8); /* Ajusta según tu diseño */
+}
+
+.header-brand {
+  text-align: center;
+}
+
+.header-name {
+  font-size: 1.2rem;
+  color: #a855f7;
+  margin: 0;
+}
+
+.header-title {
+  font-size: 1rem;
+  color: #f59e0b;
+  margin: 0;
+}
+
+.header-nav ul {
+  display: flex;
+  flex-direction: row; /* En móvil, los links pueden ir en fila si son cortos */
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
 }

@@ -3,7 +3,7 @@
   -background-image:url("../../public/images/Fondo1.jpg");
   background-size: cover;
   background-position: center;
-  height: 100vh; /* ocupa toda la pantalla al inicio */
+  height: 100%; /* ocupa toda la pantalla al inicio */
   display: flex;
   align-items: center;
   justify-content: center;

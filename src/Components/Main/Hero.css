@@ -1,87 +1,149 @@
-/* HERO */
+/* --- ESTILOS BASE (MÓVIL / 425px) --- */
+@media (min-width: 425px) {
 .hero {
   background-image: url("../../public/images/Fondo2.jpg");
   background-size: cover;
   background-position: center;
-  height: 250vh; /* ocupa toda la pantalla al inicio */
-    display: flex;
-    position: relative;
-    color: white;
+  background-attachment: fixed; /* Mantiene el fondo quieto al hacer scroll */
+  min-height: 100vh; /* Cambiamos 250vh por min-height para que crezca con el contenido */
+  display: flex;
   flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  align-items: center;
+  color: white;
+  padding: 80px 20px; /* Espacio para el header y márgenes laterales */
+  gap: 40px;
 }
 
 .project {
-  padding: 1%;
   display: flex;
+  flex-direction: column; /* Apilado vertical en móvil */
   align-items: center;
-  margin-bottom: 60px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 15px;
-  
+  width: 95%; /* Ocupa casi todo el ancho en móvil */
+  overflow: hidden;
   transition: transform 0.3s ease;
-  width: 85vw;
-      justify-content: space-around;
 }
-.proyecto-card img {
-  width: 200px;      /* mismo ancho */
-  height: 250px;     /* misma altura */
-  object-fit: cover; /* 🔥 recorta pero mantiene proporción */
-  border-radius: 8px;
-}
-
-
-.project:hover {
-  transform: scale(1.02);
-}
-
-/* .project-image {
-  flex: 1;
-} */
 
 .project-image img {
-  width: 400px;       /* tamaño fijo de imagen */
-  height: 266px;
-  flex-shrink: 0;     /* evita que se achique */
-  border-radius: 8px; /* opcional */
+  width: 100%; /* La imagen se adapta al ancho del contenedor */
+  height: auto;
+  margin-top: 5%;
+  max-height: 250px;
+  object-fit: cover;
 }
 
 .project-info {
-
-    display: flex
-;
-    max-width: 50%;
-    word-wrap: break-word;
-    line-height: 1.5;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-} 
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 100%; /* En móvil usa todo el ancho disponible */
+  text-align: center;
+  gap: 15px;
+}
 
 .project-info h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #ff8c00; /* Naranja de tu paleta */
+  font-size: 1.5rem; /* Tamaño más cómodo para celular */
+  color: #ff8c00;
+  margin: 0;
 }
 
 .project-info p {
-  font-size: x-large;
-  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.4;
   color: #ccc;
+  margin: 0;
 }
 
 .project-info a {
-  display: inline-block;
-    padding: 20px 80px;
+  padding: 12px 30px;
   background: linear-gradient(45deg, #1F3A93, #6A0DAD);
   color: #fff;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.3s;
+  align-self: center; /* Centra el botón en móvil */
+}
+}
+/* --- MEDIA QUERY (Tablet) --- */
+@media (min-width: 768px) {
+/* En tu Hero.css */
+
+.project {
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  width: 95%;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  
+  /* --- AGREGA ESTA LÍNEA --- */
+  padding: 20px; /* Esto crea el espacio entre el borde y la imagen/texto */
+  box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
 }
 
-.project-info a:hover {
-  background: linear-gradient(45deg, #ff8c00, #6A0DAD);
+  .project-image {
+    flex: 1; /* Toma la mitad del ancho */
+  }
+
+  .project-image img {
+    height: 100%; /* La imagen llena su mitad del contenedor */
+    object-fit: cover;
+  }
+
+  .project-info {
+    flex: 1; /* Toma la otra mitad */
+    text-align: left; /* Alineamos el texto a la izquierda */
+    justify-content: center;
+    padding: 30px;
+  }
+
+  /* El "Efecto Espejo" para que no sea monótono */
+  .project:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+/* --- MEDIA QUERY (ESCRITORIO) --- */
+@media (min-width: 1024px) {   
+
+.project {
+  display: flex;
+  flex-direction: row;
+  height: 400px; /* Definimos una altura fija para todas las tarjetas */
+  width: 100%;
+  max-width: 1100px; /* Para que no se estire infinito en 1920px */
+  margin: 0 auto 50px auto;
+  overflow: hidden;
+  align-items: stretch; /* Obliga a que imagen e info midan lo mismo */
+}
+
+.project-image {
+  flex: 1.2; /* Le damos un poco más de peso a la imagen */
+  height: 100%;
+  overflow: hidden; /* Corta lo que sobre del padding que agregamos antes */
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  /* ESTA ES LA PROPIEDAD MÁGICA */
+  object-fit: fill; 
+  /* 'cover' llena el espacio sin deformar, recortando los bordes si es necesario */
+  object-position: center; /* Asegura que lo importante de la imagen esté centrado */
+  transition: transform 0.5s ease;
+}
+
+.project-info {
+  flex: 1; /* El texto ocupa el resto */
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el texto verticalmente */
+  /* background: rgba(15, 15, 15, 0.8); */
+}
+.project:hover .project-image img {
+  transform: scale(1.1); /* Zoom suave */
+  filter: brightness(1.1); /* Un toque de luz */
+}
 }

@@ -7,7 +7,7 @@ footer {
     text-align: center;
     margin-top: 0%;
     width: 100%;
-    height: 100px;
+    height: 100%;
     padding: 0px;
     line-height: 2.6;
     font-family: "GADUGI";
@@ -16,7 +16,7 @@ footer {
 }
 
 footer .social-links a {
-    padding: 20px;
+    padding: 15px;
     font-size: x-large;
     text-decoration: none;
     color: #fff;

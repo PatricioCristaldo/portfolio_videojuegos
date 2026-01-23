@@ -3,19 +3,17 @@ import './Header.css'
 const Header = () => {
   return (
     <header className="header">
-      {/* Logo o nombre personal */}
-      <div className="header-logo">
-        <h2>Patricio Cristaldo</h2>
+      {/* Agrupamos todo el 'Brand' */}
+      <div className="header-brand">
+        <h2 className="header-name">Patricio Cristaldo</h2>
       </div>
-        <h1>Game Developer</h1>
+        <h1 className="header-title">Game Developer</h1>
 
-      {/* Menú de navegación */}
       <nav className="header-nav">
         <ul>
           <li><a href="#projects">Proyectos</a></li>
           <li><a href="#about">Sobre mí</a></li>
           <li><a href="#contact">Contacto</a></li>
-          
         </ul>
       </nav>
     </header>

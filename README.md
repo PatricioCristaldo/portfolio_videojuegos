@@ -1,5 +1,5 @@
-# Trabajo Práctico Final Nº 2 - Diplomatura UTN
-Despliegue del proyecto en la siguiente URL: https://patriciocristaldo.github.io/tp-final-2-react-utn/
+# Portfolio de game designer para muestra de prototipos
+Despliegue del proyecto en la siguiente URL: 
 
 Página Tipo Portfolio realizada con REACT. 
 

@@ -35,7 +35,7 @@ const projects = [
 
 const Hero = () => {
   return (
-    <section className="hero">
+    <section className="hero" id="projects">
       {projects.map((project, index) => (
         <div key={index} className="project">
           <div className="project-image">

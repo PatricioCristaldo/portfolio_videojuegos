@@ -10,22 +10,27 @@
 }
 
 header {
-    padding-bottom: 20px;
-    color: var(--quaternary-color);
-    padding-top: 20px;
-    min-height: 70px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        display: flex
-;
-    align-items: center;
-    justify-content: space-around;
-    position: relative;
-  background: linear-gradient(to right, #1F3A93, #6A0DAD);
-  background-image:url("../../public/images/Fondo1.jpg");
+  position: fixed;   /* 👈 clave */
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 1000;
+
+  padding: 1.5rem 3rem;
+  min-height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  background-image: url("../../public/images/Fondo1.jpg");
   background-size: cover;
   background-position: center;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4); /* Difumina la línea */
+
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
 }
+
 
 
 header h1 {

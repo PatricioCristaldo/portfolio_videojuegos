@@ -34,9 +34,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   line-height: 1.6;
-}
-
-body {
+  padding-top: 140px; /* mismo alto que el header */
 }
 
 

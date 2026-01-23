@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import './About.css';
-import PatricioImg from "../../public/images/Patricio.png";
+import PatricioImg from "../../public/images/Patricio2.png";
 
 
 export default function About() {

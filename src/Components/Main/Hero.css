@@ -10,7 +10,6 @@
   flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
 }
 
 .project {
@@ -20,9 +19,9 @@
   margin-bottom: 60px;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 15px;
-  overflow: hidden;
+  
   transition: transform 0.3s ease;
-  width: 80vw;
+  width: 85vw;
       justify-content: space-around;
 }
 .proyecto-card img {

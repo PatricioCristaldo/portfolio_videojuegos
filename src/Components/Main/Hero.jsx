@@ -32,7 +32,7 @@ const projects = [
     link: "https://scratch.mit.edu/projects/696499164",
   },
 ];
-
+/* seccion */
 const Hero = () => {
   return (
     <section className="hero" id="projects">

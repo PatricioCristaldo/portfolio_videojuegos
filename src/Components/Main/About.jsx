@@ -7,10 +7,16 @@ export default function About() {
   return (
     <section className="about" id="about">
       <div className="mainContainer" id="about">
-        <div className="about-text" >
+        <div className="about-texts" >
           <h2>Hola! Yo soy <h2>PATRICIO CRISTALDO</h2></h2>
           <p>
-            Graduado como técnico en producción y desarrollo de videojuegos en la Universidad Nacional de Jose C Paz. Tengo interés en el diseño de mecánicas, la programación y la creación de experiencias interactivas. A lo largo de distintos proyectos he explorado diferentes géneros y enfoques, desde plataformas 2D hasta juegos rítmicos y experiencias narrativas.
+            Graduado como técnico en producción y desarrollo de videojuegos en la Universidad Nacional de Jose C Paz. 
+          </p>
+          <p>
+            Tengo interés en el diseño de mecánicas, la programación y la creación de experiencias interactivas. 
+          </p>
+          <p>
+            A lo largo de distintos proyectos he explorado diferentes géneros y enfoques, desde plataformas 2D hasta juegos de aventura y experiencias narrativas.
           </p>
           <br></br>
           <h2>Skills</h2>

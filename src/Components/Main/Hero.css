@@ -1,49 +1,60 @@
-/* --- ESTILOS BASE (MÓVIL / 425px) --- */
-@media (min-width: 425px) {
+/* ==========================================================================
+   1. ESTILOS BASE (Móvil - Se aplica a tu celu de 375px por defecto)
+   ========================================================================== */
 .hero {
   background-image: url("../../public/images/Fondo2.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Mantiene el fondo quieto al hacer scroll */
-  min-height: 100vh; /* Cambiamos 250vh por min-height para que crezca con el contenido */
+  background-attachment: scroll; /* Evita el efecto zoom molesto en celulares */
+  background-repeat: no-repeat;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
-  padding: 80px 20px; /* Espacio para el header y márgenes laterales */
+  padding: 130px 20px 80px;
   gap: 40px;
 }
-
+.project:first-of-type {
+  /* Esto le da un extra de distancia solo al primer elemento (Spider Rush) */
+  margin-top: 20px;
+}
 .project {
   display: flex;
-  flex-direction: column; /* Apilado vertical en móvil */
+  flex-direction: column; /* Siempre vertical en móvil */
   align-items: center;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 15px;
-  width: 95%; /* Ocupa casi todo el ancho en móvil */
+  width: 100%;
+  padding: 15px;
   overflow: hidden;
   transition: transform 0.3s ease;
+  box-sizing: border-box;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
 }
 
 .project-image img {
-  width: 100%; /* La imagen se adapta al ancho del contenedor */
-  height: auto;
-  margin-top: 5%;
+  width: 100%;
+  height: auto; /* Mantiene la proporción para que no se estire */
   max-height: 250px;
-  object-fit: cover;
+  object-fit: contain;
+  display: block;
 }
 
 .project-info {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  max-width: 100%; /* En móvil usa todo el ancho disponible */
   text-align: center;
   gap: 15px;
 }
 
 .project-info h2 {
-  font-size: 1.5rem; /* Tamaño más cómodo para celular */
+  font-size: 1.5rem;
   color: #ff8c00;
   margin: 0;
 }
@@ -62,88 +73,66 @@
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  align-self: center; /* Centra el botón en móvil */
+  align-self: center;
 }
-}
-/* --- MEDIA QUERY (Tablet) --- */
-@media (min-width: 768px) {
-/* En tu Hero.css */
 
-.project {
-  display: flex;
-  flex-direction: column;
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 15px;
-  width: 95%;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  
-  /* --- AGREGA ESTA LÍNEA --- */
-  padding: 20px; /* Esto crea el espacio entre el borde y la imagen/texto */
-  box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
-}
+/* ==========================================================================
+   2. TABLET (Desde 768px)
+   ========================================================================== */
+@media (min-width: 768px) {
+  .hero {
+    background-attachment: fixed; /* Aquí sí activamos el fondo estático */
+    padding: 100px 5%;
+  }
+
+  .project {
+    flex-direction: row; /* Cambio a horizontal */
+    height: 450px; /* Altura uniforme */
+    padding: 20px;
+  }
 
   .project-image {
-    flex: 1; /* Toma la mitad del ancho */
+    flex: 1;
+    height: 100%;
   }
 
   .project-image img {
-    height: 100%; /* La imagen llena su mitad del contenedor */
-    object-fit: cover;
+    height: 100%;
+    max-height: none;
+    object-fit: fill; /* Tu elección para que todas midan igual */
   }
 
   .project-info {
-    flex: 1; /* Toma la otra mitad */
-    text-align: left; /* Alineamos el texto a la izquierda */
-    justify-content: center;
+    flex: 1;
+    text-align: left;
     padding: 30px;
+    align-items: flex-start;
   }
 
-  /* El "Efecto Espejo" para que no sea monótono */
+  .project-info a {
+    align-self: flex-start;
+  }
+
   .project:nth-child(even) {
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; /* Efecto espejo */
   }
 }
-/* --- MEDIA QUERY (ESCRITORIO) --- */
-@media (min-width: 1024px) {   
 
-.project {
-  display: flex;
-  flex-direction: row;
-  height: 400px; /* Definimos una altura fija para todas las tarjetas */
-  width: 100%;
-  max-width: 1100px; /* Para que no se estire infinito en 1920px */
-  margin: 0 auto 50px auto;
-  overflow: hidden;
-  align-items: stretch; /* Obliga a que imagen e info midan lo mismo */
-}
+/* ==========================================================================
+   3. ESCRITORIO (Desde 1024px)
+   ========================================================================== */
+@media (min-width: 1024px) {
+  .project {
+    max-width: 1100px;
+    margin: 0 auto 50px auto;
+  }
 
-.project-image {
-  flex: 1.2; /* Le damos un poco más de peso a la imagen */
-  height: 100%;
-  overflow: hidden; /* Corta lo que sobre del padding que agregamos antes */
-}
+  .project-image {
+    flex: 1.2; /* Un poco más de peso a la imagen */
+  }
 
-.project-image img {
-  width: 100%;
-  height: 100%;
-  /* ESTA ES LA PROPIEDAD MÁGICA */
-  object-fit: fill; 
-  /* 'cover' llena el espacio sin deformar, recortando los bordes si es necesario */
-  object-position: center; /* Asegura que lo importante de la imagen esté centrado */
-  transition: transform 0.5s ease;
-}
-
-.project-info {
-  flex: 1; /* El texto ocupa el resto */
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centra el texto verticalmente */
-  /* background: rgba(15, 15, 15, 0.8); */
-}
-.project:hover .project-image img {
-  transform: scale(1.1); /* Zoom suave */
-  filter: brightness(1.1); /* Un toque de luz */
-}
+  .project:hover .project-image img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
 }

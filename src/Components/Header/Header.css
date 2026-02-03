@@ -15,21 +15,27 @@
   top: 0;
   left: 0;
   width: 100%;
-
   z-index: 1000;
-
   padding: 1.5rem 3rem;
   min-height: 70px;
-
   display: flex;
   align-items: center;
   justify-content: space-around;
-
   background-image: url("../../public/images/Fondo1.jpg");
   background-size: cover;
   background-position: center;
-
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+  /* 1. Agregamos un fondo oscuro semi-transparente */
+  background-color: rgba(0, 0, 0, 0.6) !important; 
+  
+  /* 2. Efecto de desenfoque para que el fondo no distraiga (Glassmorphism) */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* Soporte para Safari móvil */
+  
+  /* 3. Un borde sutil abajo para separar del Hero */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  
+  padding: 1rem;
 }
 
 
@@ -53,6 +59,7 @@ color: var(--secondary-color);
     text-transform: uppercase;
     font-size: 16px;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .header a:hover {
@@ -67,8 +74,25 @@ color: var(--secondary-color);
 
 .header li {
     display: inline;
-    padding: 0 15px;
     font-family: "GADUGI", sans-serif;
+}
+header li a {
+  /* 4. Sombra de texto para que las letras "salten" del fondo */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  
+  /* 5. Les damos un poco más de peso visual */
+  font-weight: bold;
+  letter-spacing: 1px;
+  
+  /* Opcional: Un fondo muy sutil individual si querés que parezcan botones reales */
+  background: rgba(255, 255, 255, 0.05);
+  padding: 5px 12px;
+  border-radius: 5px;
+}
+
+/* Aseguramos que el nombre y el título también resalten */
+header h1, header h2 {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
 }
 
 .header .quote-button {
@@ -106,6 +130,14 @@ background-color: rgba(0, 0, 0, 0.8); /* Ajusta según tu diseño */
 }
 /**/
 @media (max-width: 480px) { /* Mobile view */
+  .headerContainer {
+    display: flex;
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+}
   .header {
     display: flex;
   flex-direction: column; /* Apila todo verticalmente */
@@ -148,4 +180,27 @@ background-color: rgba(0, 0, 0, 0.8); /* Ajusta según tu diseño */
   text-transform: uppercase;
 }
 
+}
+/* --- SOLO PARA CELULARES EN HORIZONTAL (LANDSCAPE) --- */
+@media (orientation: landscape) and (max-height: 500px) {
+  header {
+    /* Cambiamos de fixed a absolute para que se quede al inicio del sitio */
+    position: absolute !important; 
+    top: 0;
+    
+    /* Reducimos un poco el padding interno para ganar más píxeles de visión */
+    padding: 0.5rem 2rem;
+    min-height: 50px;
+  }
+
+  /* Ajustamos el Hero para que no tenga tanto espacio vacío arriba */
+  /* Buscamos la clase .hero en tu Hero.css o agregala aquí si es necesario */
+  .hero {
+    padding-top: 80px !important; /* Reducimos el padding de 130px que dimos antes */
+  }
+
+  /* Opcional: Ocultamos el H2 (Game Developer) solo en este modo para ahorrar espacio */
+  header h2 {
+    display: none;
+  }
 }

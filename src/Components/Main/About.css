@@ -1,95 +1,100 @@
-/* about */
+/* ==========================================================================
+   1. ESTILOS BASE (Móvil - 375px)
+   ========================================================================== */
 .about {
-  -background-image:url("../../public/images/Fondo1.jpg");
+  background-image: url("../../public/images/Fondo1.jpg");
   background-size: cover;
   background-position: center;
-  height: 100%; /* ocupa toda la pantalla al inicio */
+  background-attachment: scroll; /* Vital para que no se estire el fondo en el celu */
+  min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  /* Respiro superior (Header fixed ~70px + 50px de aire) */
+  padding: 60px 20px 60px; 
   color: white;
+  box-sizing: border-box;
 }
 
-.about-overlay {
-  background: rgba(26, 0, 51, 0.6); /* overlay púrpura oscuro */
-  width: 100%;
-  height: 100%;
+.mainContainer {
   display: flex;
+  flex-direction: column; /* Apilado vertical en móvil */
   align-items: center;
-  justify-content: center;
+  gap: 40px;
+  width: 100%;
 }
 
-.about-content {
+.about-texts {
   text-align: center;
-  padding: 20px;
+  max-width: 600px;
 }
 
-.about-text h2{
-  font-size: 3rem;
-  font-family: "AGENCYFB";
+/* --- MEJORA DE CONTRASTE PARA TEXTO NARANJA --- */
+ 
+
+.about-texts h2 {
+  font-size: 2.2rem;
+  font-family: "AGENCYFB", sans-serif;
   color: #fff;
-}
-.about-text p{
-  font-size: 3rem;
-  font-family: "AGENCYFB";
-  color: var(--accent-color);
+  margin-bottom: 40px;
+  
 }
 
-.about-subtitle {
+.about-texts p, 
+.about-texts h3 {
   font-size: 1.2rem;
-  margin: 15px 0 30px;
-  font-family: "GADUGI";
-  color: #fff;
+  font-family: "GADUGI", sans-serif;
+  color: var(--accent-color); /* Tu naranja característico */
+  line-height: 1.5;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+      margin-bottom: 15px;
 }
 
-.about-buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-/* Botones */
-.btn-primary {
-  background: var(--primary-color);
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-family: "GADUGI";
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn-primary:hover {
-  background: var(--secondary-color);
-}
-
-.btn-secondary {
-  background: transparent;
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-family: "GADUGI";
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn-secondary:hover {
-  background: var(--primary-color);
-  color: #fff;
-}
+/* Contenedor de la foto de Patricio */
 .about-img {
-width: 16vw;
-   display: flex; /* clave para eliminar el espacio inferior */
+  width: 60vw; /* Más grande en móvil para que se vea bien */
+  max-width: 250px;
+  display: flex;
   border: 2px solid rgba(105, 13, 171, 0.6);
-  padding: 6px 6px 0 6px; /* sin padding abajo */
+  padding: 6px 6px 0 6px;
   border-radius: 12px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
-.about-img img{
-width: 16vw;
 
+.about-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ==========================================================================
+   2. ESCRITORIO (Monitor 24" - 1024px en adelante)
+   ========================================================================== */
+@media (min-width: 1024px) {
+  .about {
+    background-attachment: fixed; /* Efecto Parallax en PC */
+    justify-content: center;
+    padding: 80px 5%;
+  }
+
+  .mainContainer {
+    flex-direction: row; /* Foto y texto lado a lado */
+    justify-content: center;
+    max-width: 1200px;
+    gap: 80px;
+  }
+
+  .about-texts {
+    text-align: left; /* Alineado a la izquierda para lectura profesional */
+    flex: 1;
+  }
+
+  .about-img {
+    width: 20vw; /* Tamaño proporcional en monitor grande */
+    max-width: 350px;
+  }
+
+  .about-texts h2 {
+    font-size: 3.5rem;
+  }
 }

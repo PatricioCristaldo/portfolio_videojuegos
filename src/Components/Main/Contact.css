@@ -1,3 +1,4 @@
+
 .contact {
   padding: 4rem 2rem;
     -background-image: url("../../public/images/Fondo2.jpg");
@@ -69,4 +70,25 @@
 
 .contact .cta-button a:hover {
   background: var(--tertiary-color);
+}
+/* ==========================================================================
+  * ==========================================================================
+   DISEÑO PARA ESCRITORIO (1024px en adelante)
+   ========================================================================== */
+@media (min-width: 1024px) {
+  .contact .cta-button {
+    flex-direction: row; /* Los pone uno al lado del otro */
+    flex-wrap: nowrap;   /* Fuerza una sola línea */
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .contact .cta-button a {
+    /* IMPORTANTE: Anulamos el ancho fijo del móvil */
+    width: auto; 
+    flex: 1; /* Todos miden lo mismo proporcionalmente */
+    max-width: 250px; /* Evita que se estiren de más en tu monitor de 24'' */
+    white-space: nowrap; /* Evita que el texto del botón se parta en dos */
+  }
 }
